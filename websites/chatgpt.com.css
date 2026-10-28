@@ -15,7 +15,7 @@
   --cgpt-glass-panel: light-dark(rgba(255, 255, 255, 0.45), rgba(15, 15, 18, 0.38)) !important;
   --cgpt-glass-panel-strong: light-dark(rgba(255, 255, 255, 0.82), rgba(10, 10, 12, 0.82)) !important;
   --cgpt-glass-menu: light-dark(rgba(255, 255, 255, 0.95), rgba(17, 17, 17, 0.93)) !important;
-  --cgpt-sidebar-glass: light-dark(rgba(235, 239, 246, 0.92), rgba(16, 16, 24, 0.92)) !important;
+  --cgpt-sidebar-glass: light-dark(rgba(235, 239, 246, 0.18), rgba(16, 16, 24, 0.18)) !important;
   --cgpt-border: light-dark(rgba(15, 23, 42, 0.13), rgba(255, 255, 255, 0.13)) !important;
   --cgpt-border-strong: light-dark(rgba(15, 23, 42, 0.18), rgba(255, 255, 255, 0.18)) !important;
   --cgpt-hover: light-dark(rgba(15, 23, 42, 0.055), rgba(255, 255, 255, 0.07)) !important;
@@ -897,4 +897,15 @@ button.flex.h-6.w-6.items-center.justify-center.rounded-full.border.border-token
 /* cgpt-hide-disclaimer $ Hides the "I know ChatGPT can make mistakes" hint */
 [data-testid="thread-disclaimer"] {
   display: none !important;
+}
+/* @cgpt-composer-glass */
+form[data-type="unified-composer"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+form[data-type="unified-composer"] > div {
+  background-color: rgba(16, 16, 24, 0.18) !important;
+  backdrop-filter: blur(18px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(120%) !important;
 }
